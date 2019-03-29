@@ -56,11 +56,11 @@ In PowerShell, running as Administrator:
 ```powershell
 choco install golang
 choco install zip
-choco install git # for git-bash
+choco install git.install --params "/GitAndUnixToolsOnPath /NoGitLfs /SChannel /NoAutoCrlf"  # for git-bash and unix tools on path
 choco install make
 ```
 
-In a shell that has Make, like Git-Bash:
+On Powershell or Git-Bash shell:
 
 ```sh
 git clone https://github.com/cormacrelf/terraform-provider-zerotier
