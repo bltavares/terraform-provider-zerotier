@@ -304,7 +304,7 @@ resource "zerotier_member" "hector" {
   # Computed RFC4193 (IPv6 /128) address based on the network and node id
   # Always calculated, and determined if they are used by the network resource
 
-  # 6plane_address
+  # zt6plane_address
   # Computed 6PLANE (IPv6 /80) address based on the network and node id
   # Always calculated, and determined if they are used by the network resource
 
