@@ -93,7 +93,7 @@ func resourceZeroTierMember() *schema.Resource {
 				Description: "Computed RFC4193 (IPv6 /128) address. Always calculated and only actually assigned on the member if RFC4193 is configured on the network.",
 				Computed:    true,
 			},
-			"6plane_address": {
+			"zt6plane_address": {
 				Type:        schema.TypeString,
 				Description: "Computed 6PLANE (IPv6 /60) address. Always calculated and only actually assigned on the member if 6PLANE is configured on the network.",
 				Computed:    true,
@@ -295,7 +295,7 @@ func resourceMemberRead(d *schema.ResourceData, m interface{}) error {
 	d.Set("ipv4_assignments", ipv4Assignments)
 	d.Set("ipv6_assignments", ipv6Assignments)
 	d.Set("rfc4193_address", rfc4193Address(d))
-	d.Set("6plane_address", sixPlaneAddress(d))
+	d.Set("zt6plane_address", sixPlaneAddress(d))
 	d.Set("capabilities", member.Config.Capabilities)
 	setTags(d, member)
 
