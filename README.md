@@ -1,9 +1,32 @@
 # Terraform provider for ZeroTier
 
-[![Build Status](https://travis-ci.org/cormacrelf/terraform-provider-zerotier.svg?branch=master)](https://travis-ci.org/cormacrelf/terraform-provider-zerotier)
+<a href="https://registry.terraform.io/providers/bltavares/zerotier/latest">
+  Terraform Registry
+  <br />
+  <img src="https://img.shields.io/badge/bltavares%2Fzerotier-0.3.0-blueviolet" />
+</a>
 
 This lets you create, modify and destroy [ZeroTier](https://zerotier.com)
 networks and members through Terraform.
+
+
+## How to use this provider
+
+To install this provider, copy and paste this code into your Terraform configuration. Then, run `terraform init`.
+
+**Terraform 0.13**
+
+```hcl
+terraform {
+  required_providers {
+    zerotier = {
+      source = "bltavares/zerotier"
+      version = "0.3.0"
+    }
+  }
+}
+```
+
 
 ## Building and Installing
 
